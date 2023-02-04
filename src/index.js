@@ -1,51 +1,71 @@
 /**
- * Represents a book.
- * @constructor
- * @param {string} title - The title of the book.
- * @param {string} author - The author of the book.
+ * Tag items data types
+ * @typedef {Object} Tag
+ * @property {string} id tag id
+ * @property {string} name tag name
  */
-function Book(title, author) {}
 
 /**
- * Both of these will link to the bar function.
- * @see {@link bar}
- * @see bar
+ * Todo items data types
+ * @typedef {Object} Todo
+ * @property {string} id todo id
+ * @property {string} content todo content
+ * @property {string} category todo category
+ * @property {boolean} status todo status
+ * @property {Tag[]} tags todo tags
  */
-function foo() {}
-
-// Use the inline {@link} tag to include a link within a free-form description.
-/**
- * @see {@link foo} for further information.
- * @see {@link http://github.com|GitHub}
- */
-function bar() {}
 
 /**
- * Generic dairy product.
- * @constructor
+ * createTodo function parameters type
+ * @typedef {Object} CreateTodo
+ * @property {string} content todo content - optional
+ * @property {string} category todo category - optional
+ * @property {boolean} status todo status - optional
+ * @property {Tag[]} tags todo tags - optional
  */
-function DairyProduct() {}
 
 /**
- * Check whether the dairy product is solid at room temperature.
- * @abstract
- * @return {boolean}
+ * @description function create todolist item
+ * @param {CreateTodo} CreateTodo CreateTodoItem {content, category, status, tags}
+ * @return {Todo} TodoItem {id, content, category, status, tags}
  */
-DairyProduct.prototype.isSolid = function () {
-	throw new Error('must be implemented by subclass!');
-};
+function createTodo() {}
 
 /**
- * Cool, refreshing milk.
- * @constructor
- * @augments DairyProduct
+ * @description function read todolists
+ * @return {Todo[]} TodoItem {id, content, category, status, tags}
+ *
  */
-function Milk() {}
+function readTodo() {}
 
 /**
- * Check whether milk is solid at room temperature.
- * @return {boolean} Always returns false.
+ * @description function read todolist item
+ * @param {string} id todo id
+ * @return {Todo} TodoItem {id, content, category, status, tags}
+ *
  */
-Milk.prototype.isSolid = function () {
-	return false;
-};
+function readDetailTodo() {}
+
+/**
+ * updateTodo function parameters type
+ * @typedef {Object} UpdateTodo
+ * @property {string/} id todo content - required
+ * @property {string=} content todo content - optional
+ * @property {string=} category todo category - optional
+ * @property {boolean=} status todo status - optional
+ * @property {Tag[]} tags todo tags - optional
+ */
+
+/**
+ * @description function update todolist item
+ * @param {UpdateTodo} UpdateTodo UpdateTodoItem {*id, content, category, status, tags}
+ * @return {Todo} TodoItem {id, content, category, status, tags}
+ */
+function updateTodo() {}
+
+/**
+ * @description function delete todolist item
+ * @param {string} id *todo id
+ * @return {boolean} return success status
+ */
+function deleteTodo() {}
