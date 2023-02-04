@@ -1,3 +1,6 @@
+https://merorii.github.io/wanted-pre-onboarding-challenge-fe-2/
+<br/><br/>
+
 ## 원티드 프리온보딩 프론트엔드 챌린지 Typescript 사전과제 가이드
 
 > 요구 사항을 구현하지 않고 설계만합니다.
